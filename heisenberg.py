@@ -17,7 +17,7 @@ def clear_string(data):
 
 mode = 'test'
 
-conversas = open('./data/scripts.txt')
+conversas = open('data/scripts.txt')
 conversas = conversas.readlines()
 conversas = map(lambda x: x.split(":")[-1].strip(), conversas)
 conversas = " ".join(conversas)
