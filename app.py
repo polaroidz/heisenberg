@@ -8,8 +8,12 @@ app = Flask(__name__)
 
 sent_size = 30
 
-@app.route("/", methods=['POST'])
+@app.route("/", methods=['GET'])
 def hello():
+    return "Jesse!"
+
+@app.route("/", methods=['POST'])
+def webhook():
     model = heisenberg.get_model(pretrained=True)
 
     event = request.data
